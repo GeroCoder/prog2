@@ -8,7 +8,7 @@ public class GoodsUtil {
         }
         return usefulness;
     }
-
+    /*
     public static AbstractUsefulObject getMostUsefulObject(AbstractUsefulObject[] usefulObjects){
         AbstractUsefulObject mostUsefulObject = usefulObjects[0];
         for (int i = 0; i< usefulObjects.length; i++){
@@ -28,4 +28,6 @@ public class GoodsUtil {
             usefulObject.ge
         }
     }
+
+     */
 }
