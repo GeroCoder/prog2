@@ -29,8 +29,7 @@ public abstract class AbstractUsefulObject {
 
     @Override
     public String toString() {
-        return super.toString() +
-                "AbstractUsefulObject{" +
+        return "AbstractUsefulObject{" +
                 "name='" + name + '\'' +
                 ", usefulness=" + usefulness +
                 '}';

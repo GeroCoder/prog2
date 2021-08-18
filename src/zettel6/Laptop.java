@@ -1,22 +1,13 @@
 package zettel6;
 
 public class Laptop extends AbstractElectricalDevice{
-    private int numberOfCores;
     private int numberOfThreads;
 
-    public Laptop(String name, double usefulness, boolean isStationary, double electricalConsumption, int numberOfCores, int numberOfThreads) {
+    public Laptop(String name, double usefulness, boolean isStationary, double electricalConsumption, int numberOfThreads) {
         super(name, usefulness, isStationary, electricalConsumption);
-        this.numberOfCores = numberOfCores;
         this.numberOfThreads = numberOfThreads;
     }
 
-    public int getNumberOfCores() {
-        return numberOfCores;
-    }
-
-    public void setNumberOfCores(int numberOfCores) {
-        this.numberOfCores = numberOfCores;
-    }
 
     public int getNumberOfThreads() {
         return numberOfThreads;
@@ -28,14 +19,13 @@ public class Laptop extends AbstractElectricalDevice{
 
     @Override
     boolean makesHappy() {
-        return numberOfCores > 2 && getElectricalConsumption() <= 4;
+        return numberOfThreads > 2 && getElectricalConsumption() <= 4;
     }
 
     @Override
     public String toString() {
         return super.toString() +
                 "Laptop{" +
-                "numberOfCores=" + numberOfCores +
                 ", numberOfThreads=" + numberOfThreads +
                 '}';
     }

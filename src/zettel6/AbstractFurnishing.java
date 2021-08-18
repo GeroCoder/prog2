@@ -2,14 +2,14 @@ package zettel6;
 
 public abstract class AbstractFurnishing extends AbstractUsefulObject{
     private float length;
-    private float hight;
+    private float height;
     private String material;
     private double weight;
 
     public AbstractFurnishing(String name, double usefulness, float length, float hight, String material, double weight) {
         super(name, usefulness);
         this.length = length;
-        this.hight = hight;
+        this.height = hight;
         this.material = material;
         this.weight = weight;
     }
@@ -22,12 +22,12 @@ public abstract class AbstractFurnishing extends AbstractUsefulObject{
         this.length = length;
     }
 
-    public float getHight() {
-        return hight;
+    public float getHeight() {
+        return height;
     }
 
-    public void setHight(float hight) {
-        this.hight = hight;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
     public String getMaterial() {
@@ -51,7 +51,7 @@ public abstract class AbstractFurnishing extends AbstractUsefulObject{
     }
 
     public float getSizeInSquareMeters(){
-        return length * hight;
+        return length * height;
     }
 
     @Override
@@ -59,7 +59,7 @@ public abstract class AbstractFurnishing extends AbstractUsefulObject{
         return super.toString() +
                 "AbstractFurnishing{" +
                 "length=" + length +
-                ", hight=" + hight +
+                ", hight=" + height +
                 ", material='" + material + '\'' +
                 ", weight=" + weight +
                 '}';

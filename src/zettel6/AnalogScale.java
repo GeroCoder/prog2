@@ -8,7 +8,7 @@ public class AnalogScale extends AbstractDevice{
 
     @Override
     boolean makesHappy() {
-        return (getUsefulness() > 0 && !isStationary());
+        return (getUsefulness() > 0 && !getStationary());
     }
 
 

@@ -8,7 +8,7 @@ public abstract class AbstractDevice extends AbstractUsefulObject{
         this.isStationary = isStationary;
     }
 
-    public boolean isStationary() {
+    public boolean getStationary() {
         return isStationary;
     }
 
