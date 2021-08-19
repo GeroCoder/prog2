@@ -2,6 +2,8 @@ package probeklausur.aufgabe1;
 
 //TODO implement the method writeToStream() correctly
 
+import java.io.OutputStream;
+
 public class Computer extends AbstractTechnicalDevice implements CanWriteToStream {
 
     private long cpuClocking;
@@ -30,5 +32,10 @@ public class Computer extends AbstractTechnicalDevice implements CanWriteToStrea
     @Override
     public double getValue() {
         return getCpuClocking() / 2.0;
+    }
+
+    @Override
+    public void writeToStream(OutputStream outputStream) {
+
     }
 }
