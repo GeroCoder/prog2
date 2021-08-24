@@ -14,6 +14,8 @@ public class ShopShelfUtil {
      */
     public static void printCoffeePackInformationForShopShelf(ShopShelf shopShelf) {
         // TODO: Solution Expected
+        shopShelf.getCoffeePacks()
+        s -> System.out.println(shopShelf.getCoffeePacks());
     }
 
     /**
