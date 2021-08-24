@@ -8,7 +8,7 @@ public class Main {
         System.out.println(piece.getFaction());
 
 
-    EnumMap<Song,String> songChess = new EnumMap<Song,String>(Song.class);
+    EnumMap<Song,String> songChess = new EnumMap<>(Song.class);
     }
 
 }
