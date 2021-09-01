@@ -6,6 +6,8 @@ import zettel11.model.PackagingType;
 import zettel11.model.ShopShelf;
 
 import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class ShopShelfUtil {
     /**
@@ -14,8 +16,7 @@ public class ShopShelfUtil {
      */
     public static void printCoffeePackInformationForShopShelf(ShopShelf shopShelf) {
         // TODO: Solution Expected
-        shopShelf.getCoffeePacks()
-        s -> System.out.println(shopShelf.getCoffeePacks());
+        shopShelf.getCoffeePacks();
     }
 
     /**
@@ -31,11 +32,11 @@ public class ShopShelfUtil {
      * @param shopShelves list of shop shelves
      * @return map of coffee packs as described above
      */
-    public static Map<String,CoffeePack> getGroupedCoffeePackagesByName(List<ShopShelf> shopShelves) {
+    /*public static Map<String,CoffeePack> getGroupedCoffeePackagesByName(List<ShopShelf> shopShelves) {
         // TODO: Solution Expected
-        Map<String,CoffeePack> coffepack = new HashMap<>();
-        return coffepack;
-    }
+
+        //return shopShelves.stream().map(shopShelf -> shopShelf.getCoffeePacks().stream()).collect(Collectors.toMap(CoffeePack::toString,));
+    }*/
 
     /**
      * Prints all coffee packs that have between 100 and 200 beans and are packaged in paper packaging.
@@ -51,22 +52,22 @@ public class ShopShelfUtil {
      * @param packagingType packaging type
      * @return list of shop shelves as described above
      */
-    public static List<ShopShelf> getShopShelvesByPackagingType(ShopShelf[] shopShelves, PackagingType packagingType) {
+    /*public static List<ShopShelf> getShopShelvesByPackagingType(ShopShelf[] shopShelves, PackagingType packagingType) {
         // TODO: Solution Expected
         List<ShopShelf> shopshelf = new ArrayList<>();
         return shopshelf;
-    }
+    }*/
 
     /**
      * Returns average amount of beans in a given shop shelf.
      * @param shopShelf a single shop shelf
      * @return average amount of beans, if shop shelf is empty, 0 is returned.
      */
-    public static Double getAverageBeansInShopShelf(ShopShelf shopShelf) {
+    /*public static Double getAverageBeansInShopShelf(ShopShelf shopShelf) {
         // TODO: Solution Expected
         Double averageBeans = 0.0;
         return averageBeans;
-    }
+    }*/
 
     /**
      * Returns a set of coffee beans that need to be bought with a porcelain filter and which are of bean type liberica.

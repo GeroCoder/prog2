@@ -1,4 +1,4 @@
-package zettel9;
+package zettel9.aufgabe1;
 
 public enum Song {
     AUF_UND_AB(3),

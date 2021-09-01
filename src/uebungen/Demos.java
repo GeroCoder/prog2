@@ -1,26 +1,17 @@
 package uebungen;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Demos {
     public static void main(String[] args) {
-        List<Number> myList = new LinkedList<>();
-        //myList.add(1);
-        myList.add(2);
-        myList.add(5);
-        myList.add(7);
-        myList.add(0,1);
-
-        Iterator<Number> it = myList.iterator();
-        while (it.hasNext()){
-            Number currentValue = it.next();
-            if(currentValue.equals(5)){
-                it.remove();
-                currentValue = it.next();
-            }
-            System.out.println(currentValue);
+        System.out.println("pleae enter a double");
+        double x = 0.0;
+        try (Scanner scanner = new Scanner(System.in)) {
+            x = scanner.nextDouble();
+            System.out.println("you entered a " + x);
+        } catch (InputMismatchException exception) {
+            x = 0.0;
+            System.out.println(x);
         }
 
     }

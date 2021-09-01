@@ -11,6 +11,9 @@ public class FruitMain {
         fruits.add(new Apple("Green Apple", "round", 87, false, false));
         fruits.add(new Blueberries("Coolberries", "oval", 42, false, 325));
         FruitUtil fruitUtil = new FruitUtil();
-        System.out.println(FruitUtil.computeRelativeFruitCoreHistogram(fruits));
+        System.out.println(FruitUtil.computeFruitCoreHistogram(fruits));
+        for(Fruit f:fruits){
+            System.out.println(f);
+        }
     }
 }

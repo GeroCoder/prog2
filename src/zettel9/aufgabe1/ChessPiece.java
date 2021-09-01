@@ -1,4 +1,4 @@
-package zettel9;
+package zettel9.aufgabe1;
 
 public enum ChessPiece {
 

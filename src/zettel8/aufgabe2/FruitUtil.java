@@ -11,18 +11,17 @@ public class FruitUtil {
         //Collections.sort(fruits);
         Map<String,Integer> map = new HashMap<>();
         Collections.sort(fruits);
-        int oval = 0;
-        int round = 0;
-        for(Fruit f: fruits){
-            if(f.getForm().equals("oval")) {
-                oval += f.getFruitCores();
+        String form = fruits.get(0).getForm();
+        int core = fruits.get(0).getFruitCores();
+        map.put(form,core);
+        for(int i = 1; i < fruits.size(); i++){
+            if(fruits.get(i).getForm().equals(fruits.get(i-1).getForm())){
+                core += fruits.get(i).getFruitCores();
+                map.put(form,core);
             }
-            else {
-                round += f.getFruitCores();
-            }
+            form = fruits.get(i).getForm();
+            core = fruits.get(i).getFruitCores();
         }
-        map.put("Oval",oval);
-        map.put("round",round);
         return map;
     }
 
@@ -35,13 +34,13 @@ public class FruitUtil {
         int oval = 0;
         int round = 0;
         int total = 0;
-        for(Fruit f: fruits){
-            total += f.getFruitCores();
-            if(f.getForm().equals("oval")) {
-                oval += f.getFruitCores();
+        for(Fruit fruit: fruits){
+            total += fruit.getFruitCores();
+            if(fruit.getForm().equals("oval")) {
+                oval += fruit.getFruitCores();
             }
             else {
-                round += f.getFruitCores();
+                round += fruit.getFruitCores();
             }
         }
         map.put("Oval",(double) oval * 100 / total);
