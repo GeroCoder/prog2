@@ -6,22 +6,6 @@ import java.nio.file.Path;
 
 public class MonsterMain {
 
-    public static void writeMonster(File fileName, Monster monster)throws IOException{
-        FileOutputStream file = new FileOutputStream(fileName);
-        ObjectOutputStream o = new ObjectOutputStream(file);
-        o.writeObject(monster);
-    }
-
-    public static void readMonster(File filename) throws IOException, ClassNotFoundException {
-        FileInputStream inputStream = new FileInputStream(filename);
-        ObjectInputStream o = new ObjectInputStream(inputStream);
-        //while (inputStream.read() != -1) {
-            Monster m = (Monster) o.readObject();
-            System.out.println(m);
-        //}
-        //inputStream.close();
-    }
-
     public static void main(String[] args) {
         String fileName = "C:\\Users\\abdul.alsabbagh\\Documents\\GitHub\\prog2\\src\\zettel10\\aufgabe1\\monsters.txt";
         String fileName1 = "C:\\Users\\abdul.alsabbagh\\Documents\\GitHub\\prog2\\src\\zettel10\\aufgabe1\\monsters1.txt";
@@ -41,7 +25,7 @@ public class MonsterMain {
         }*/
 
         try{
-            readMonster(file);
+            MonsterUtil.readMonster(file);
         }
 
         catch (IOException | ClassNotFoundException ex){

@@ -1,0 +1,2 @@
+AbstractValubleObject{, name='Sculpture 1'}AbstractArt{manufacturingDate=Sun Jan 15 00:00:00 CET 3899, manufacturer='Jemand'}Sculpture{weight=99.31, height=2.8}
+AbstractValubleObject{, name='HP'}AbstractTechnicalDevice{voltage=25.0, electricity=24.0, lifeSpan=10}Computer{cpuClocking=354}

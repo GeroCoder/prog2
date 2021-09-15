@@ -1,6 +1,8 @@
 package probeklausur.aufgabe1;
 
+import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 public class Sculpture extends AbstractArt implements CanWriteToStream{
@@ -46,7 +48,9 @@ public class Sculpture extends AbstractArt implements CanWriteToStream{
     }
 
     @Override
-    public void writeToStream(OutputStream outputStream) {
-
+    public void writeToStream(OutputStream outputStream) throws IOException {
+        byte[] byteObject = this.toString().getBytes(StandardCharsets.UTF_8);
+        outputStream.write(byteObject);
+        outputStream.write(10);
     }
 }
