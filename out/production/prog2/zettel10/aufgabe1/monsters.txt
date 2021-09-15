@@ -1,0 +1,8 @@
+Ghoul
+20
+36
+false
+Bear
+15
+42
+true
