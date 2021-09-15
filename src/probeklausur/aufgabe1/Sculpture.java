@@ -3,50 +3,47 @@ package probeklausur.aufgabe1;
 import java.io.OutputStream;
 import java.util.Date;
 
-//TODO implement the method writeToStream() correctly
-
 public class Sculpture extends AbstractArt implements CanWriteToStream{
 
-    private double weightInKg;
+    private double weight;
 
-    private double heightInMeter;
+    private double height;
 
-    public Sculpture(String name, Date manufacturingDate, String manufacturer, double weightInKg, double heightInMeter) {
+    public Sculpture(String name, Date manufacturingDate, String manufacturer, double weight, double height) {
         super(name, manufacturingDate, manufacturer);
-        this.weightInKg = weightInKg;
-        this.heightInMeter = heightInMeter;
+        this.weight = weight;
+        this.height = height;
     }
 
-    public double getWeightInKg() {
-        return weightInKg;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setWeightInKg(double weightInKg) {
-        this.weightInKg = weightInKg;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    public double getHeightInMeter() {
-        return heightInMeter;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHeightInMeter(double heightInMeter) {
-        this.heightInMeter = heightInMeter;
-    }
-
-    @Override
-    public double getValue() {
-        return getWeightInKg() * getHeightInMeter();
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
     public String toString() {
         return super.toString() +
                 "Sculpture{" +
-                "weightInKg=" + weightInKg +
-                ", heightInMeter=" + heightInMeter +
+                "weight=" + weight +
+                ", height=" + height +
                 '}';
     }
 
+    @Override
+    public double getValue() {
+        return getHeight() * getWeight();
+    }
 
     @Override
     public void writeToStream(OutputStream outputStream) {

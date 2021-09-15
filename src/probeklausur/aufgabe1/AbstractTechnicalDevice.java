@@ -1,15 +1,19 @@
 package probeklausur.aufgabe1;
 
-public abstract class AbstractTechnicalDevice extends AbstractValuableObject{
-    private double voltage;
-    private double electicity;
-    private int lifeSpanInYears;
+import java.util.Objects;
 
-    public AbstractTechnicalDevice(String name, double voltage, double electicity, int lifeSpanInYears) {
+public abstract class AbstractTechnicalDevice extends AbstractValubleObject{
+    private double voltage;
+
+    private double electricity;
+
+    private int lifeSpan;
+
+    public AbstractTechnicalDevice(String name, double voltage, double electricity, int lifeSpan) {
         super(name);
         this.voltage = voltage;
-        this.electicity = electicity;
-        this.lifeSpanInYears = lifeSpanInYears;
+        this.electricity = electricity;
+        this.lifeSpan = lifeSpan;
     }
 
     public double getVoltage() {
@@ -20,24 +24,20 @@ public abstract class AbstractTechnicalDevice extends AbstractValuableObject{
         this.voltage = voltage;
     }
 
-    public double getElecticity() {
-        return electicity;
+    public double getElectricity() {
+        return electricity;
     }
 
-    public void setElecticity(double electicity) {
-        this.electicity = electicity;
+    public void setElectricity(double electricity) {
+        this.electricity = electricity;
     }
 
-    public int getLifeSpanInYears() {
-        return lifeSpanInYears;
+    public int getLifeSpan() {
+        return lifeSpan;
     }
 
-    public void setLifeSpanInYears(int lifeSpanInYears) {
-        this.lifeSpanInYears = lifeSpanInYears;
-    }
-
-    public double agingFactor(){
-        return getVoltage() * getElecticity();
+    public void setLifeSpan(int lifeSpan) {
+        this.lifeSpan = lifeSpan;
     }
 
     @Override
@@ -45,8 +45,26 @@ public abstract class AbstractTechnicalDevice extends AbstractValuableObject{
         return super.toString() +
                 "AbstractTechnicalDevice{" +
                 "voltage=" + voltage +
-                ", electicity=" + electicity +
-                ", lifeSpanInYears=" + lifeSpanInYears +
+                ", electricity=" + electricity +
+                ", lifeSpan=" + lifeSpan +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        AbstractTechnicalDevice that = (AbstractTechnicalDevice) o;
+        return Double.compare(that.voltage, voltage) == 0 && Double.compare(that.electricity, electricity) == 0 && lifeSpan == that.lifeSpan;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), voltage, electricity, lifeSpan);
+    }
+
+    public double agingFactor(){
+        return getElectricity() * getVoltage();
     }
 }

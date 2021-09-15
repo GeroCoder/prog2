@@ -1,15 +1,14 @@
 package probeklausur.aufgabe1;
 
-//TODO implement the method writeToStream() correctly
-
 import java.io.OutputStream;
 
-public class Computer extends AbstractTechnicalDevice implements CanWriteToStream {
+public class Computer extends AbstractTechnicalDevice implements CanWriteToStream{
 
     private long cpuClocking;
 
-    public Computer(String name, double voltage, double electicity, int lifeSpanInYears, long cpuClocking) {
-        super(name, voltage, electicity, lifeSpanInYears);
+
+    public Computer(String name, double voltage, double electricity, int lifeSpan, long cpuClocking) {
+        super(name, voltage, electricity, lifeSpan);
         this.cpuClocking = cpuClocking;
     }
 
@@ -22,16 +21,16 @@ public class Computer extends AbstractTechnicalDevice implements CanWriteToStrea
     }
 
     @Override
+    public double getValue() {
+        return getCpuClocking() / 2;
+    }
+
+    @Override
     public String toString() {
         return super.toString() +
                 "Computer{" +
                 "cpuClocking=" + cpuClocking +
                 '}';
-    }
-
-    @Override
-    public double getValue() {
-        return getCpuClocking() / 2.0;
     }
 
     @Override

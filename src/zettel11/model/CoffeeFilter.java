@@ -9,19 +9,22 @@ public enum CoffeeFilter {
      * German: Handfilter
      **/
     HAND,
+
     /**
      * Procelain filter.
      * German: Kaffeefilter aus Porzellan
      **/
     PORCELAIN,
+
     /**
      * Copper filter.
      * German: Filter aus Kupfer
      **/
     COPPER,
+
     /**
      * Cotton filter.
-     * German: Filter aus Kupfer
+     * German: Filter aus Baumwolle
      **/
     COTTON
 }

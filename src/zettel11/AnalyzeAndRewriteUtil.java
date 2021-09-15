@@ -5,6 +5,7 @@ import zettel11.model.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Stream;
 
 public class AnalyzeAndRewriteUtil {
 

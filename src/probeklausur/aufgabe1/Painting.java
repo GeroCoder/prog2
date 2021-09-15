@@ -2,10 +2,25 @@ package probeklausur.aufgabe1;
 
 import java.util.Date;
 
-public class Painting extends AbstractArt {
+public class Painting extends AbstractArt{
+    public enum ColorType{
+
+        OIL(500),
+        ACRYLIC(200),
+        WATERCOLOR(20);
+
+        private int cost;
+
+        ColorType(int cost) {
+            this.cost = cost;
+        }
+
+        public int getCost() {
+            return cost;
+        }
+    }
 
     private ColorType colorType;
-    private int cost;
 
     public Painting(String name, Date manufacturingDate, String manufacturer, ColorType colorType) {
         super(name, manufacturingDate, manufacturer);
@@ -20,13 +35,9 @@ public class Painting extends AbstractArt {
         this.colorType = colorType;
     }
 
-    public int getCost() {
-        return colorType.getCost();
-    }
-
     @Override
     public double getValue() {
-        return getCost() * 1.1;
+        return getColorType().getCost() * 1.1;
     }
 
     @Override
@@ -34,7 +45,6 @@ public class Painting extends AbstractArt {
         return super.toString() +
                 "Painting{" +
                 "colorType=" + colorType +
-                ", cost=" + cost +
                 '}';
     }
 }

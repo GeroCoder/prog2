@@ -7,10 +7,13 @@ package zettel11.model;
 public enum PackagingType {
     /** Paper packaging */
     PAPER,
+
     /** Plastic packaging */
     PLASTIC,
+
     /** Wood packaging */
     WOOD,
+
     /** No or loose packaging */
     LOOSE
 }

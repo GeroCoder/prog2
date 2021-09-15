@@ -1,11 +1,11 @@
 package probeklausur.aufgabe1;
 
-public class ElectricCar extends AbstractTechnicalDevice {
+public class ElectricCar extends AbstractTechnicalDevice{
 
     private int range;
 
-    public ElectricCar(String name, double voltage, double electicity, int lifeSpanInYears, int range) {
-        super(name, voltage, electicity, lifeSpanInYears);
+    public ElectricCar(String name, double voltage, double electricity, int lifeSpan, int range) {
+        super(name, voltage, electricity, lifeSpan);
         this.range = range;
     }
 
@@ -18,20 +18,19 @@ public class ElectricCar extends AbstractTechnicalDevice {
     }
 
     @Override
-    public double getValue() {
-        return getRange() * 10;
-    }
-
-    @Override
     public String toString() {
-        return super.toString() +
-                "ElectricCar{" +
+        return "ElectricCar{" +
                 "range=" + range +
                 '}';
     }
 
     @Override
+    public double getValue() {
+        return getRange() * 10;
+    }
+
+    @Override
     public double agingFactor() {
-        return super.agingFactor() * 10 / 100;
+        return super.agingFactor() + super.agingFactor() * 0.1;
     }
 }

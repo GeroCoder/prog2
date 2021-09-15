@@ -3,9 +3,15 @@ package probeklausur.aufgabe1;
 import java.util.Date;
 
 public class Main {
+
     public static void main(String[] args) {
-        Date d1 = new Date(2020/3/4);
-        Painting p1 = new Painting("p1",d1,"manufacturer",ColorType.WATERCOLOR);
-        System.out.println(p1.getCost());
+        Sculpture sculpture = new Sculpture("Sculpture 1",new Date(1998,12,15),"Jemand", 99.31,2.8);
+        Computer computer = new Computer("HP",25,24,10,354);
+        ElectricCar electricCar = new ElectricCar("Tesla", 243,231,56,50);
+        Painting painting = new Painting("Painting", new Date(1501,7,1),"Leonardo", Painting.ColorType.OIL);
+
+
+        System.out.println(painting.getColorType());
+
     }
 }
